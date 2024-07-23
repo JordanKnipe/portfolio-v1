@@ -1,8 +1,9 @@
 // src/app/movie-list/movie-list.component.ts
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Movie, Provider } from './movie.model';
 import { MovieService } from './MovieService.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-movie-list',
@@ -57,8 +58,12 @@ export class MovieListComponent implements OnInit {
   
   currentGenreId: string = ''; // Store the current genre id
 
-  constructor(private movieService: MovieService) {}
+  constructor(private sanitizer: DomSanitizer, private movieService: MovieService) {}
 
+sanitizedUrl(video: any): SafeResourceUrl {
+    const baseUrl = 'https://www.youtube.com/embed/';
+    return this.sanitizer.bypassSecurityTrustResourceUrl(baseUrl + video.results[0].key);
+}
   ngOnInit() {
     this.movieService.getProviders()
       .subscribe({
@@ -77,6 +82,7 @@ export class MovieListComponent implements OnInit {
   openModal(movie: Movie): void {
     this.selectedMovie = movie;
     this.showModal = true;
+    this.handleClick(movie);
   }
 
   closeModal(): void {
@@ -88,6 +94,7 @@ export class MovieListComponent implements OnInit {
   
     let fetchCount = 0;
     if (this.selectedProviders.length === 0) {
+      this.moviesDisplaying = false;
       this.applyPagination(); // Update the view to show no movies
       return; // Exit the function since there are no providers to fetch from
     }
@@ -162,7 +169,19 @@ onSubmit(): void {
       this.applyPagination();
     }
   }
+  video:any;
   handleClick(movie: Movie): void {
     console.log('Movie clicked:', movie);
-  }
+    this.movieService.getVideos(movie.id).subscribe({
+        next: (videoResponse) => {
+            this.video = videoResponse;
+            console.log('Video details:', this.video);
+            // You can now use 'this.video' in your component to display video details or play the trailer
+        },
+        error: (error) => {
+            console.error('Error fetching videos:', error);
+        }
+    });
+}
+
 }

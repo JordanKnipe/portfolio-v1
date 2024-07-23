@@ -19,6 +19,11 @@ export class MovieService {
   }
 
   getMoviesByProvider(providerId: string): Observable<Movie[]> {
-    return this.http.get<Movie[]>(`${this.baseUrl}/discover/movie?api_key=${environment.TMDB_KEY}&with_watch_providers=${providerId}&watch_region=AU`);
+    return this.http.get<Movie[]>(`${this.baseUrl}/discover/movie?api_key=${environment.TMDB_KEY}&with_watch_providers=${providerId}&watch_region=AU&sort_by=primary_release_date.desc`);
   }
+  getVideos(movieId: number): Observable<any> {  // Change `any` to a more specific type if you have it
+    return this.http.get<any>(`${this.baseUrl}/movie/${movieId}/videos?api_key=${environment.TMDB_KEY}`);
+}
+
+
 }

@@ -1,7 +1,10 @@
-.app-container{
-    background-color: var(--color-main-theme); /* Light grey background for the container */
-    //height: var(--height-minus-header);
+
+
+.app-container {
+  background-color: var(--secondary-color);
+
 }
+
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -47,7 +50,7 @@
     justify-content: center;
     padding: 20px;
     padding-bottom: 0px;
-    color: var(--color-text);
+    color: var(--color-text-faded);
     letter-spacing: 1px;
     }
     .new_release_header{
@@ -55,7 +58,7 @@
         justify-content: center;
    
         padding-bottom: 0px;
-    color: var(--color-text);
+    color: var(--color-text-faded);
     letter-spacing: 1px;
 }
 .movie-list{
@@ -92,6 +95,7 @@
     display: flex;
     justify-content: center;
     margin: auto;
+    
   }
   .prev-button{
     margin: auto;
@@ -104,14 +108,17 @@
     height: 180px;
     border-radius: 10px;
   }
-  
+  .movie-card{
+    transition: transform 0.3s ease;
+    height: 100%;
+  }
   .movie-card img {
     width: 120px;
     height: auto; /* Adjust height based on your layout needs */
     object-fit: cover; /* Ensures the image covers the area properly */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    
     border-radius: 8px;
   }
   
@@ -126,19 +133,25 @@
   button {
     padding: 10px 20px;
     margin: 10px;
-    background-color: #007bff;
-    color: white;
+    background-image: var(--color-button-gradient);
+    color: var(--color-text);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    width: 100px;
+    transition: transform 0.3s ease-in-out;
   }
   
   button:disabled {
-    background-color: #ccc;
+    background-color: #666666;
+    background-image: unset;
     cursor: not-allowed;
+    
   }
-  
-
+ 
+  button:hover{
+    transform: scale(1.1);
+  }
 
 
   .modal {
@@ -156,18 +169,20 @@
   .modal-core-content { 
     display: flex;
     border-radius: 8px;
+    
   }
   .modal-image{
     height: 60vh;
     display: flex;
   }
   .modal-image img {
-    border-radius: 10px;
+    border-radius: 8px 0 0 8px;
+    height: 100%;
   }
   .modal-content {
     background-color: var(--color-main-theme);
     margin: auto;
-    padding: 20px;
+    //padding: 20px;
     border: 1px solid #131313;
     width: 60%;
     height: 60%;
@@ -175,9 +190,34 @@
     margin-bottom:20vh;
     border-radius: 10px;
   }
+  .scroll-content{
+    height: 28vw;
+    overflow-y: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* For Internet Explorer and Edge */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* For Firefox */
+
+  }
+
+  .scrollable-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollable-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.scrollable-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}  
   .movie-info-content{
     padding:20px;
-    color: white;
+    color: var(--color-text-faded);
     letter-spacing: 1px;
   }
   .movie-info-content h2{
@@ -191,6 +231,9 @@
     float: right;
     font-size: 28px;
     font-weight: bold;
+    margin-right: 20px;
+    padding-left: 5px;
+    margin-top: 10px;
   }
   
   .close:hover,
@@ -198,8 +241,13 @@
     color: #ffffff;
     text-decoration: none;
     cursor: pointer;
+    
   }
-  
+  .trailer{
+    padding: 10px;
+    
+
+  }
   .show {
     display: block;
   }

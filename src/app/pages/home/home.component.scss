@@ -71,6 +71,10 @@
 }
 .projects{
     padding-top: 10rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 10rem;
 }
 h1, h2, p{
     color: var(--color-text-faded);
@@ -201,7 +205,7 @@ nav {
   
 
   .banner-container {
-    container-type: inline-size;
+    container-type: size;
   }
   
   /* Container Query: Adjustments for smaller containers typical of mobile devices */
@@ -225,8 +229,13 @@ nav {
     .scrollable-content {
       margin-top: 0; /* Adjust top margin if necessary */
       max-height: 55vh;
-    
+    overflow-y: unset;
     }
+    .top-of-banner{
+        height: 100%;
+        overflow-y: scroll;
+    }
+  
    
     
   }

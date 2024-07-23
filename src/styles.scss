@@ -30,7 +30,7 @@ body {
 [data-theme="light"] {
     //Lightmode:
     --color-main-theme-header: #242630;
-    --color-main-theme: #fff;
+    --color-main-theme: #e3e3ef;
     --color-main-theme-secondary: #e6e6e6;
     --color-nav-highlight: linear-gradient(to right, #4c6994, #00ff0000); 
     --color-lower: #c5c5c5;
@@ -48,15 +48,19 @@ body {
      --color-tags: #379ac299;
      --color-tag-text: #eef6f9;
      --color-nav-bar: #6495ed;
+     --color-button-gradient: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
+    
  }
  
  [data-theme="dark"] {
      --color-nav-bar: #6495ed;
+     --color-gradient-light: #6495ed;
+     --color-gradient-dark: #4668a7;
      --color-main-theme-header: #242630;
      --color-main-theme: #2e3141;
      --color-main-theme-secondary: #3f435a;
      --color-main-theme-lightest:linear-gradient(to bottom, var(--color-main-theme), var(--color-lower),var(--color-lower), var(--color-lower), var(--color-main-theme));
-     --color-border: #242630;
+     --color-button-gradient: radial-gradient(circle at 12.3% 19.3%, rgb(85, 88, 218) 0%, rgb(95, 209, 249) 100.2%);
      --color-tags: #00b7ff94;
      --color-tag-text: #c8efff;
      --color-text: #ffffff;
