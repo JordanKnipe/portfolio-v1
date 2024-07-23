@@ -1,0 +1,124 @@
+   <div class="banner-container">
+    <div class="top-of-banner">
+        <div  class="profile-img">
+            <img src="assets/images/portrait.jpg" alt="Portrait">
+            <div class="nav-div"><nav>
+                <a [ngClass]="{'active': currentSection === 'about'}" (click)="scrollTo('about')">About</a>
+                <a [ngClass]="{'active': currentSection === 'skills'}" (click)="scrollTo('skills')">Skills</a>
+                <a [ngClass]="{'active': currentSection === 'experience'}" (click)="scrollTo('experience')">Experience</a>
+                <a [ngClass]="{'active': currentSection === 'projects'}" (click)="scrollTo('projects')">Projects</a>
+              </nav>
+            </div>
+        </div>
+       
+        <div class="scrollable-content" #scrollableElement>
+            <div class="subscrollable-content">
+        <div #section id="about" class="slogan">
+            <h1>Hi, I'm Jordan</h1>
+            <p>I'm all about diving deep into the world of software and game development, 
+                mixing my love for tech with a splash of creativity. 
+                From <span style="color: #7ebbf1; font-weight: bold;"> Angular</span> and <span style="color: #7ebbf1; font-weight: bold;"> AWS</span> to <span style="color: #7ebbf1; font-weight: bold;"> Unity & Unreal</span>,
+                 I have got a knack for developing new tools and love developing in the Cloud Environment. I'm always on the lookout for new challenges, 
+                 like mastering procedural animations, experimenting with physics movement in games and using
+                  geospatial data to bring data closer to the user. When I'm not coding, you'll find me hiking, 
+                  gardening, or working on my latest fun project!</p>
+        </div>
+        <div #section id="skills" class="technologies">
+            <!--<span>Education</span> -->
+            <div class="education-and-certs">
+                <img src="../../../assets/technologies/AWS-Certified.png">
+                <img src="../../../assets/technologies/Azure-SC-certified.webp">
+                <img src="../../../assets/technologies/azure-ai-fundamentals-600x600.png">
+                <img src="../../../assets/technologies/usclogo.png">
+            </div>
+            <!--<span>Technologies</span> -->
+            <div class="software">
+                <img src="../../../assets/technologies/angularjs_logo.png">
+                <img src="../../../assets/technologies/aws.png">
+                <img src="../../../assets/technologies/github-purple.png">
+                <img src="../../../assets/technologies/docker.svg">
+                <img src="../../../assets/technologies/atlassianicon.svg">
+            </div>
+            <!--  <span>Languages</span> -->
+            <div class="languages">
+                
+                <img src="../../../assets/technologies/css-logo.png">
+                <img src="../../../assets/technologies/html-logo.png">
+                <img src="../../../assets/technologies/js-logo.png">
+                <img src="../../../assets/technologies/python-logo.png">
+                <img src="../../../assets/technologies/node-icon.png">
+            
+        </div>
+        </div>
+        <div>
+        <div #section id="experience" class="job-content ontap">
+            <div class="date-range"><p>2023 - Present</p></div>
+            <div class="work-experience-content">
+            
+            <h2>Ontap Data | Full-stack Software Developer</h2>
+            
+            <p>Collaborated with other developers to develop data driven web-applications for 
+            internal and external use gathering feedback weekly from large liquor retailers
+            such as Thirsty Camel and Independant Liquor Retailer. Built, Styled and Worked closely with cross-functional
+            teams to implement more secure and efficient best practices. </p>
+            <div class="skills">
+                <div class="skill">Angular</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">HTML & CSS</div>
+                <div class="skill">TypeScript</div>
+                <div class="skill">SQL</div>
+                <div class="skill">NodeJS</div>
+                <div class="skill">PHP</div>
+                <div class="skill">AWS Lambda</div>
+                <div class="skill">S3</div>
+                <div class="skill">Cloudfront</div>
+                <div class="skill">API Gateway</div>
+                <div class="skill">Bitbucket</div>
+                <div class="skill">WordPress</div>
+            </div>
+        </div>
+   
+    </div>
+   
+    
+    </div>
+        <div class="job-content suncoast">
+            <div class="date-range"><p>2020 - 2023</p></div>
+            <div class="work-experience-content">
+            <h2>Suncoast Caravan Service | Wordpress Developer</h2>
+            <p>
+            Built and Maintained critical components for a wordpress based e-commerce caravan retailer. Optimised website performance enhancing SEO rankings, created internal tools to
+            significiantly improve workflow efficiency and enabled more acurrate data collection for more insight.
+            </p>
+            <div class="skills">
+                <div class="skill">JavaScript</div>
+                <div class="skill">HTML & CSS</div>
+                <div class="skill">JQuery</div>
+                <div class="skill">SQL</div>
+                <div class="skill">Python</div>
+                <div class="skill">PHP</div>
+                <div class="skill">WordPress</div>
+            </div>
+            </div>
+    </div>
+   
+    </div>
+        <div #section id="projects" class="projects">
+        
+            <app-card
+            imageUrl="path_to_project_image.jpg"
+            title="Movie New Release Finder"
+            description="Quickly find new releases for the streaming services you own."
+            projectUrl="http://localhost:4200/movie-list"
+            sourceUrl=""
+            >
+            </app-card>
+
+        
+        </div>
+        
+    </div>
+</div>
+</div> 
+    
+

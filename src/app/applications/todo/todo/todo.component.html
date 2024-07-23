@@ -1,0 +1,23 @@
+<div class="todo-row">
+    @if(editing){
+    <ng-container>
+      <input class="editing-field" [(ngModel)]="editValue" (keyup.enter)="onSave(todo)" >
+      <button class="save-button" (click)="onSave(todo)">💾</button>
+      <button class="cancel-button" (click)="onCancel()">🚫</button>
+    </ng-container>
+}
+@else{
+    
+
+
+      <div class="todo-value" [ngClass]="{'completed': todo.isComplete == 1}" (click)="completed(todo)">
+        {{ todo.itemValue }}
+      </div>
+      <div class="icons">
+        <button (click)="startEdit()">✏️</button>
+        <button (click)="onDelete()">🗑️</button>
+      </div>
+   
+}
+  </div>
+  

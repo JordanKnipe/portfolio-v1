@@ -1,0 +1,49 @@
+.container {
+   
+    display: flex;
+  }
+  
+  app-sidebar {
+    transition: width 0.3s ease;
+  }
+
+
+  
+  .content {
+    flex: 1;
+    //padding-left: 250px; /* Adjust to match the expanded width of the sidebar */
+    transition: padding-left 0.3s ease;
+    background-color: var(--color-main-theme); /* Background color for the content area */
+  }
+  
+  
+  .content-collapsed {
+    margin-left: 50px; /* Adjust to match the collapsed width of the sidebar */
+    transition: margin-left 0.3s ease;
+
+  }
+  
+  .content-expanded {
+    margin-left: 250px; /* Adjust to match the expanded width of the sidebar */
+    transition: margin-left 0.3s ease;
+  }
+
+  @media only screen and (max-width: 1175px) {
+    .content {
+      &-collapsed, &-expanded {
+        .container {
+          // Set the default height that applies to both collapsed and expanded initially
+          height: var(--height-minus-header);
+        }
+      }
+    
+      &-expanded {
+        .container {
+          // Override the height for the expanded state
+          height: var(--height-minus-header-expanded);
+        }
+      }
+    }
+  }
+  
+  

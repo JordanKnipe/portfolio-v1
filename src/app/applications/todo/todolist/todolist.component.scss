@@ -1,0 +1,110 @@
+/* General Application Styling */
+.app {
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: var(--color-main-theme-secondary);
+}
+
+.todo-application h1 {
+    color: var(--color-text);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* To-Do Form Styles */
+.todo-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.todo-input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin-right: 8px;
+}
+
+.todo-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.todo-button:hover {
+    background-color: #0056b3;
+}
+
+/* To-Do Item Styles */
+.todo-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    background-color: var(--color-lower);
+}
+
+.todo-value {
+    cursor: pointer;
+    flex-grow: 1; /* Ensure the todo value fills the row */
+}
+
+.icons {
+    display: flex;
+}
+
+.icons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #666;
+    font-size: 24px;
+    transition: color 0.2s ease-in-out;
+}
+
+.icons button:hover {
+    color: #007bff;
+}
+
+.complete {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Spinner and Error Messages */
+.spinner,
+.error {
+    text-align: center;
+    margin-top: 20px;
+    color: #D8000C;
+    font-size: 16px;
+}
+.error-fetching{
+    color: white;
+}
+
+.spinner {
+    border: 6px solid rgba(0, 0, 0, 0.1); /* Light grey border */
+    border-top: 6px solid #3498db; /* Blue color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

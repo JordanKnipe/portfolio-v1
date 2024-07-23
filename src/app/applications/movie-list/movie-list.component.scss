@@ -1,0 +1,206 @@
+.app-container{
+    background-color: var(--color-main-theme); /* Light grey background for the container */
+    //height: var(--height-minus-header);
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+    
+    /* Light grey background for the container */
+  }
+  
+  .card {
+      width: 60px; /* Slightly larger width */
+      height: 60px;
+      margin: 5px; /* Larger margin for better spacing */
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1); /* Softer shadow for a subtle effect */
+      border-radius: 40%; /* Rounded corners for a smoother look */
+      overflow: hidden; /* Ensures nothing hangs out of the card */
+      transition: transform 0.3s ease-in-out; /* Smoother transition effect */
+      background:var(--color-main-theme-secondary); /* White background for the cards */
+      
+      }
+      
+      .card:hover {
+          transform: translateY(-5px); /* Subtle lift effect on hover */
+          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover for a 'lifting' effect */
+          }
+          .card.selected {
+            border: 2px solid #007bff; /* Blue border for selected card */
+            transform: scale(1.2); /* Slightly larger scale for emphasis */
+          }
+          
+  
+  .card-img-top {
+    width:inherit; /* Full width */
+  
+    height:auto; /* Fixed height for uniformity */
+    object-fit:cover; /* Ensures the image covers the area nicely without distortion */
+  }
+  
+
+
+.select_providers_header{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 0px;
+    color: var(--color-text);
+    letter-spacing: 1px;
+    }
+    .new_release_header{
+        display: flex;
+        justify-content: center;
+   
+        padding-bottom: 0px;
+    color: var(--color-text);
+    letter-spacing: 1px;
+}
+.movie-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 60vh;
+}
+  .movie-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px; /* Adjust width based on your layout needs */
+    margin: 15px;
+    margin-bottom: 5px;
+    overflow: hidden;
+  }
+  
+.sort-box-container{
+    display: flex;
+    justify-content: right;
+    padding-right: 5rem;
+}
+  .fetch-button{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .page-button-container{
+    display: flex;
+  }
+  .next-button{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+  .prev-button{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+  .movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    height: 180px;
+    border-radius: 10px;
+  }
+  
+  .movie-card img {
+    width: 120px;
+    height: auto; /* Adjust height based on your layout needs */
+    object-fit: cover; /* Ensures the image covers the area properly */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+  }
+  
+  .movie-title {
+    padding: 10px;
+    font-size: 10px; /* Adjust font size based on your layout needs */
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+
+
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.825);
+  }
+  
+  .modal-core-content { 
+    display: flex;
+    border-radius: 8px;
+  }
+  .modal-image{
+    height: 60vh;
+    display: flex;
+  }
+  .modal-image img {
+    border-radius: 10px;
+  }
+  .modal-content {
+    background-color: var(--color-main-theme);
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #131313;
+    width: 60%;
+    height: 60%;
+    margin-top: 20vh;
+    margin-bottom:20vh;
+    border-radius: 10px;
+  }
+  .movie-info-content{
+    padding:20px;
+    color: white;
+    letter-spacing: 1px;
+  }
+  .movie-info-content h2{
+    padding:10px;
+  }
+  .movie-info-content p{
+    padding:10px;
+  }
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .show {
+    display: block;
+  }
+  

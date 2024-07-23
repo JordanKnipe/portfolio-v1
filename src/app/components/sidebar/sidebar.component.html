@@ -1,0 +1,10 @@
+<nav [ngClass]="{'collapsed': collapsed, 'expanded': !collapsed}" (click)="toggleSidebar()">
+    <ol>
+        <li class="nav-1"><a routerLink="/home" routerLinkActive="active"(click)="$event.stopPropagation()"><i class="fa-solid fa-house"></i>Home</a></li>
+        <li class="nav-2"><a routerLink="/about" routerLinkActive="active"(click)="$event.stopPropagation()"><i class="fa-solid fa-address-card"></i>About</a></li>
+        <li class="nav-3"><a routerLink="/demos" routerLinkActive="active"(click)="$event.stopPropagation()"><i class="fa-solid fa-keyboard"></i>Demos</a></li>
+        <li class="nav-4"><a routerLink="/projects" routerLinkActive="active"(click)="$event.stopPropagation()"><i class="fa-solid fa-folder"></i>Projects</a></li>
+        <li class="nav-5"><a routerLink="/contact" routerLinkActive="active"(click)="$event.stopPropagation()"><i class="fa-solid fa-address-book"></i>Contact</a></li>
+    </ol>
+  </nav>
+  

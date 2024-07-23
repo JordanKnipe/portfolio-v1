@@ -1,0 +1,18 @@
+<form [formGroup]="todoForm" (ngSubmit)="onSubmit()" class="todo-form">
+    <input type="text" placeholder="Add a todo" formControlName="text" class="todo-input">
+    @if(todoForm.get('text')?.errors && todoForm.get('text')?.touched){
+    <div class="error-notify">
+        @if(todoForm.get('text')?.hasError('required')){
+        <small class="error">
+            Todo is required.
+        </small>
+    }
+        @if(todoForm.get('text')?.hasError('invalidCharacters')){
+            <small class="error" >
+            Only letters and spaces are allowed.
+        </small>
+    }
+    </div>
+}
+    <button type="submit" class="todo-button" [disabled]="!todoForm.valid">Add Todo</button>
+</form>

@@ -1,0 +1,25 @@
+<div class="app">
+    <div class="todo-application">
+        <h1>To-Do Application</h1>
+        <app-todo-form (fetchTodos)="fetchTodos()"></app-todo-form>
+        @if(isLoading){
+        <div class="spinner">
+            <!-- Spinner here -->
+        </div>
+    }
+        @if (error) {
+        <div class="error-fetching">
+            Error fetching todos. Please try again.
+        </div>
+    }
+        @if (!isLoading) {
+        <div>
+            <div>
+                @for (todo of todos; track $index) {
+                <app-todo [todo]="todo"(fetchTodos)="fetchTodos()" (delete)="deleteTodo($event)" (update)="updateTodo($event.id, $event.itemValue)"></app-todo>
+            
+                }</div>
+        </div>
+    }
+    </div>
+</div>

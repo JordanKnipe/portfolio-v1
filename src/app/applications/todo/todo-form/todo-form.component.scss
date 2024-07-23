@@ -1,0 +1,60 @@
+/* Styles for the todo form */
+.todo-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid var();
+    border-radius: 8px;
+    background-color: var(--color-lower);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+input{
+    background-color: var(--color-input-field);
+}
+.todo-input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--color-lower);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.todo-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.todo-button:hover {
+    background-color: #0056b3;
+}
+.error-notify{
+    margin: 10px;
+    color: white;
+}
+.error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+    padding: 5px;
+    margin-bottom: 10px;
+    margin: 2px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Additional styling to handle focus states for better accessibility */
+.todo-input:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.todo-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

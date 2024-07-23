@@ -1,0 +1,49 @@
+<div class="app-container">
+  <h3 class="select_providers_header"> Select Up to 3 Providers: </h3>
+<div class="card-container">
+  @for (item of providers; track $index) {
+  <div class="card"(click)="toggleProviderSelection(item.provider_id)" [class.selected]="selectedProviders.includes(item.provider_id)">
+    <img src="https://image.tmdb.org/t/p/w500{{item.logo_path}}" alt="Item Image" class="card-img-top">
+    
+  </div>
+}
+
+
+</div>
+
+@if(moviesDisplaying){<h3 class="new_release_header">New Releases: </h3>}
+<div class="sort-box-container">
+<select (change)="filterByGenre($event)">
+  <option value="">Select Genre</option>
+  @for (genre of genreArray; track $index) {
+  <option  [value]="genre.key">{{ genre.value }}</option>
+  }
+</select>
+</div>
+<div class="movie-list">
+@for (movie of pagedMovies; track $index) {
+<div class="movie-card" (click)="openModal(movie)">
+  <img [src]="'https://image.tmdb.org/t/p/w300' + movie.poster_path" alt="Movie Poster">
+  
+</div>
+}
+</div>
+<div class="page-button-container">
+<button class="prev-button" (click)="previousPage()" [disabled]="currentPage === 1">Previous</button>
+<button class="next-button" (click)="nextPage()" [disabled]="currentPage * itemsPerPage >= movies.length">Next</button>
+</div>
+</div>
+
+<div class="modal" [class.show]="showModal">
+  <div class="modal-content">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <div class="modal-core-content">
+      <div class="modal-image"><img [src]="'https://image.tmdb.org/t/p/w500' + selectedMovie?.poster_path" alt="Movie Image"></div>
+    <div class="movie-info-content">
+      <h2>{{ selectedMovie?.title }}</h2>
+    <p><strong>Release Date:</strong> {{ selectedMovie?.release_date }}</p>
+    <p>{{ selectedMovie?.overview }}</p>
+  </div>
+  </div>
+  </div>
+</div>
