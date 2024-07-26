@@ -75,6 +75,7 @@
     width: 100%;
     justify-content: center;
     padding-bottom: 10rem;
+    flex-direction: column;
 }
 h1, h2, p{
     color: var(--color-text-faded);
@@ -106,7 +107,7 @@ h2{
 p{
     letter-spacing: .06rem;
     text-align: justify;
-    font-size: .8rem;
+    font-size: .9rem;
 }
 .technologies img {
     height: auto;

@@ -1,54 +1,73 @@
 .project-card {
-    width: 30vw;
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); 
-    padding-top: 5px;
+    display: flex;
+    align-items: center;
+    width: 95%;
+    height: 25vh;
+    border: 1px solid transparent;
     border-radius: 8px;
     overflow: hidden;
+    //transition: border 0.3s ease-in-out, transform 0.3s ease-in-out;
+    background-color: var(--color-main-theme); /* Initial background color */
     margin: 20px;
-    transition: transform 0.3s ease-in-out;
+  }
+  
+  .project-content {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
   }
   
   .project-card:hover {
-    transform: translateY(-5px);
-    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
+    background-color: var(--color-main-theme-secondary); /* Slightly darker background on hover */
+    border-color: #009dff; /* Slightly visible border on hover */
   }
   
   .project-image {
-    width: 100%;
-    height: 200px;
-    border-radius: 8px 8px 0px 0px;
-    object-fit: cover; /* Ensures the image covers the area without being stretched */
+    width: auto;
+    height: 15vh;
+    //border-radius: 8px 0 0 8px;
+    object-fit: cover;
+    padding: 10px;
   }
   
   .project-details {
-    padding: 15px;
-    
-    
+    flex: 1;
+  padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   .project-title {
     margin-top: 0;
-    color:var(--color-text-faded)
+    color: var(--color-text-faded);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: .05rem;
   }
   
   .project-description {
-    color:var(--color-text-faded);
+    color: var(--color-text-faded);
     font-size: 14px;
-    padding: 5px;
+    line-height: 1.5;
   }
   
   .project-buttons button {
-    background-color: #007BFF;
+    background-color: var(--color-nav-bar);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 5px 10px;
     margin-right: 5px;
-    border-radius: 5px;
+    border-radius: 75px;
+    margin: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
   
   .project-buttons button:hover {
-    background-color: #0056b3;
+    background-color: #6494edaa;
   }
   

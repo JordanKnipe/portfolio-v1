@@ -37,11 +37,11 @@ nav {
   }
   
   .fa-solid {
-    color: white;
+    color: var(--color-text-faded);
     margin-right: 1.2rem;
   }
   .fa-solid:hover {
-    color: #007bff;
+    color: var(--color-nav-bar);
     
   }
   ol {
@@ -58,12 +58,12 @@ nav {
   
   a {
     text-decoration: none;
-    color: #ffffff;
+    color: var(--color-text-faded);
   
     align-items: center;
   }
   
   a:hover {
-    color: #007bff;
+    color: var(--color-nav-bar);
   }
   
