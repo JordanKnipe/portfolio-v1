@@ -106,7 +106,7 @@ h2{
     padding-right: 1rem;
 }
 p{
-    letter-spacing: .06rem;
+    
     text-align: justify;
     font-size: .9rem;
 }
@@ -134,7 +134,7 @@ p{
     padding: 8px 16px; /* Padding inside each tag */
     border-radius: 16px; /* Rounded corners for the tags */
     font-size: 10px; /* Text size */
-    letter-spacing: .06rem;
+   
     font-weight: bold; /* Bold text */
     text-align: center;
 }
@@ -237,14 +237,24 @@ nav {
         height: 100%;
         overflow-y: scroll;
     }
-  
+
+  }
+  li{
+    color:var(--color-text-faded);
+    padding-top: 1rem;
    
-    
   }
   @media only screen and (max-width: 768px) {
     .banner-container {
         margin-left: 5vw;
         margin-right: 5vw;
+    
+     }
+  }
+  @media only screen and (min-width: 1921px) {
+    .banner-container {
+        margin-left: 30vw;
+        margin-right: 30vw;
     
      }
   }

@@ -1,5 +1,6 @@
 <app-header></app-header>
-<div class="container">
+<div #lightContainer class="container"(mousemove)="updateLightPosition($event)">
+  <div #lightEffect class="light-effect"></div>
   <app-sidebar [collapsed]="isSidebarCollapsed" (collapsedChange)="onSidebarToggle($event)"></app-sidebar>
   
   <div class="content"  [ngClass]="{'content-collapsed': isSidebarCollapsed, 'content-expanded': !isSidebarCollapsed}">

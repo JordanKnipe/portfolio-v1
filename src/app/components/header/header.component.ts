@@ -9,11 +9,11 @@ import { Component, Inject, OnInit, Renderer2 } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit {
-  theme: string = 'light';
+  theme: string = 'dark';
   constructor(private renderer: Renderer2, @Inject(DOCUMENT) private document: Document) {}
 
   ngOnInit() {
-    this.theme = localStorage.getItem('theme') || 'light';  // Load theme from storage or default to 'light'
+    this.theme = localStorage.getItem('theme') || 'dark';  // Load theme from storage or default to 'light'
     this.applyTheme();
     this.updateCheckboxState();
   }
