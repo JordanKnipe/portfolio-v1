@@ -23,7 +23,7 @@ jobs:
 
       - name: Setup Environment Variables
         run: |
-          sed -i "s/\${TMDB_KEY}/${{ secrets.TMDB_KEY }}/g" src/environments/environment.prod.ts  # Verify this path
+          sed -i "s/\${TMDB_KEY}/${{ secrets.TMDB_KEY }}/g" src/environment.ts  # Verify this path
 
       - name: Build
         run: npm run build
