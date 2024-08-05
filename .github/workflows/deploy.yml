@@ -22,7 +22,7 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
-        working-directory: ./portfolio-v1/
+       
 
       - name: Setup Environment Variables
         run: |
@@ -31,15 +31,15 @@ jobs:
 
       - name: Build
         run: ng build --configuration=production
-        working-directory: ./portfolio-v1/
+       
 
       - name: List Build Output
         run: ls -al ./dist/angular-portfolio
-        working-directory: ./portfolio-v1/
+      
 
       - name: Deploy to S3
         run: aws s3 sync dist/ s3://jordan-portfolio-v1 --delete
-        working-directory: ./portfolio-v1/
+      
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
