@@ -39,5 +39,5 @@ jobs:
           aws-region: 'ap-southeast-2' # or your AWS region
 
       - name: Deploy to S3
-        run: aws s3 sync ./build s3://jordan-portfolio-v1 --delete
+        run: aws s3 sync ./dist s3://jordan-portfolio-v1 --delete
 
