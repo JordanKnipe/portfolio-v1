@@ -2,9 +2,15 @@
 
 .app-container {
   background-color: var(--secondary-color);
-
+  
 }
-
+@media only screen and (min-width: 1600px) {
+  .app-container {
+    
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+}
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -171,6 +177,7 @@
     border-radius: 8px;
     
   }
+
   .modal-image{
     height: 60vh;
     display: flex;
@@ -191,7 +198,7 @@
     border-radius: 10px;
   }
   .scroll-content{
-    height: 28vw;
+    
     overflow-y: scroll;
     -ms-overflow-style: -ms-autohiding-scrollbar; /* For Internet Explorer and Edge */
     scrollbar-width: thin; /* For Firefox */
@@ -243,12 +250,49 @@
     cursor: pointer;
     
   }
-  .trailer{
-    padding: 10px;
-    
 
+
+  .trailer {
+    
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 56.25%; /* creates a 16:9 aspect ratio */
   }
+  
+  .trailer iframe,
+  .trailer embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+  }
+  
+  /* And set the max-width of the parent element */
+  .trailer-wrapper {
+    width: 100%;
+    max-width: 750px;
+  }
+
   .show {
     display: block;
   }
-  
+  @media only screen and (max-width: 1200px) {
+    .modal-core-content { 
+      flex-direction: column;
+    align-items: center;
+    }
+    .modal-content{
+      height:unset;
+      margin-top: 5vh;
+    }
+    .modal-image{
+      height: 40vh;
+      
+    }
+    .modal-image img {
+      border-radius: 0 0 0 0;
+    }
+  }

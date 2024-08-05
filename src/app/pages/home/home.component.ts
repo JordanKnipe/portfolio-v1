@@ -16,7 +16,7 @@ export class HomeComponent implements AfterViewChecked, AfterViewInit {
 
   @ViewChild('scrollableElement', { static: true }) scrollableElement: ElementRef | undefined;
   @ViewChildren('section') sections: QueryList<ElementRef> | undefined;
-
+  
   constructor(private cdr: ChangeDetectorRef, private router: Router) {}
 
   ngAfterViewInit() {
@@ -52,8 +52,11 @@ export class HomeComponent implements AfterViewChecked, AfterViewInit {
       console.error("Scrollable element not available.");
     }
   }
+  navigateToTodo() {
+    console.log("test")
+    this.router.navigateByUrl('todo');
+  }
 
-  
   onScrollStopped() {
     console.log('Scrolling has stopped.');
     this.onScrollableElementScroll();

@@ -48,9 +48,11 @@
     <p><strong>Release Date:</strong> {{ selectedMovie?.release_date }}</p>
     <p>{{ selectedMovie?.overview }}</p>
     @if(video){
+      <div class="trailer-wrapper">
       <div class="trailer">
-        <iframe width="500" height="300" [src]="sanitizedUrl(video)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe [src]="sanitizedUrl(video)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+  </div>
     }
   </div>
 </div>

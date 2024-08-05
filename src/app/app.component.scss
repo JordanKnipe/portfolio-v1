@@ -1,5 +1,6 @@
+
 .container {
-   
+
     display: flex;
   }
   
@@ -28,6 +29,13 @@
     transition: margin-left 0.3s ease;
   }
 
+  @media only screen and (min-width: 1176px) {
+    .container {
+      margin-left: unset;
+      margin-right: unset;
+    
+     }
+  }
   @media only screen and (max-width: 1175px) {
     .content {
       &-collapsed, &-expanded {

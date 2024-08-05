@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     width: 95%;
-    height: 25vh;
+    height: auto;
     border: 1px solid transparent;
     border-radius: 8px;
     overflow: hidden;
@@ -14,7 +14,7 @@
   .project-content {
     display: flex;
     align-items: center;
-
+    flex-wrap: wrap;
     width: 100%;
   }
   
