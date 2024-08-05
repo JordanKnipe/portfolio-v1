@@ -1,4 +1,4 @@
-name: build and deploy
+name: build
 
 on:
   push:
@@ -49,7 +49,7 @@ jobs:
         run: cd $GITHUB_WORKSPACE
 
       - name: Deploy to S3
-        run: aws s3 sync ./dist/angular-portfolio s3://jordan-portfolio-v1 --delete
+        run: aws s3 sync dist/angular-portfolio s3://jordan-portfolio-v1 --delete
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
