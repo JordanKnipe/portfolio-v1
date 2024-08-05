@@ -1,6 +1,6 @@
 export const environment = {
   production: false,
-  TMDB_KEY: 'f017fd31f53fc47617a83d89912b7ba7'
+  TMDB_KEY: '${TMDB_KEY}'
 };
 
 
