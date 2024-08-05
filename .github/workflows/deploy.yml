@@ -36,7 +36,7 @@ jobs:
         run: ng build --configuration=production
        
       - name: Deploy to S3
-        run: aws s3 sync dist/ s3://jordan-portfolio-v1 --delete
+        run: aws s3 sync dist/angular-portfolio/browser/ s3://jordan-portfolio-v1 --delete
       
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
