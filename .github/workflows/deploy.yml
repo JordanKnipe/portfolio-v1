@@ -30,6 +30,9 @@ jobs:
         env:
           TMDB_KEY: ${{ secrets.TMDB_KEY }} # Using the TMDB_KEY in the build process
 
+      - name: List build output
+        run: ls -l ./dist
+        
   deploy:
     needs: build
     runs-on: ubuntu-latest
