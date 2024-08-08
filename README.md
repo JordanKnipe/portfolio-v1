@@ -1,27 +1,24 @@
 # AngularPortfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
+Updated from my previous version which was written in ReactJS
 
-## Development server
+# Design
+I took inspiration of this design from a professional web-application that i developed for Ontapdata. I loved the 'application' feel to it, using a side navbar rather than tradional top header.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+# Architecture
 
-## Code scaffolding
+This portfolio is hosted on AWS S3 as a static website, and is distributed by Cloudfront, this was done for eventual domain registration along side invalidations on CI/CD uploads.
+Current CI/CD uploads from github actions to s3.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Frameworks and tools: ** Angular18, Typescript, HTML/CSS, S3, Cloudfront, API-GateWay**.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Applications
 
-## Running unit tests
+There are currently 2 sub-applications hosted inside this portfolio, which are current demos.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Movie New Release Finder Application
+This application will eventually be moved onto it's ownw repository and extended further. In it's current state it is used to select your current streaming services, and the user will be able to see all of the movies that they could potentially watch.
+This was created for personal use, so i did not have to scroll through on the TV, and having to go through each and every service. TODO: this will be extended to favourite TV shows, and receive updates when news of new seasons or updates come out regarding release dates.
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
