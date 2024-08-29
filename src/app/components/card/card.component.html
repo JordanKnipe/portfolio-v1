@@ -6,9 +6,16 @@
       <h3 class="project-title">{{ title }}</h3>
       <p class="project-description">{{ description }}</p>
       <div class="project-buttons">
+        @if(projectUrl){
         <a [routerLink]="['/' + projectUrl]" target="_blank" rel="noopener noreferrer">
           <button type="button"><i class="fa-solid fa-eye"></i> View Project</button>
         </a>
+      }
+      @else{
+        <a href="{{externalSourceUrl}}" target="_blank" rel="noopener noreferrer">
+          <button type="button"><i class="fa-solid fa-eye"></i> View Project</button>
+        </a>
+      }
         
         <a href="{{ sourceUrl }}" target="_blank" rel="noopener noreferrer">
           <button type="button"><i class="fa-solid fa-code"></i></button>

@@ -14,6 +14,7 @@ export class CardComponent {
   @Input() description!: string;
   @Input() projectUrl!: string;
   @Input() sourceUrl!: string;
+  @Input() externalSourceUrl!: string;
 
   @Output() onClick = new EventEmitter<void>();
 
